@@ -33,14 +33,14 @@ const newGame=()=>{
   enableBoxes();
   msgContainer.classList.add("hide");
   newGameBtn.classList.add("hide");
-  document.body.style.backgroundColor = `rgb(125, 184, 164)`;
+  document.body.style.backgroundColor = `#4e8397`;
 }
 const showWinner=(winner)=>{
   msgContainer.innerText=` Player ${winner} wins!`
   msgContainer.classList.remove("hide");
   disableBoxes();
   newGameBtn.classList.remove("hide");
-  document.body.style.backgroundColor = `rgb(195, 235, 221)`;
+  document.body.style.backgroundColor = `#c4fcef`;
 
 }
 const checkWinner=()=>{
@@ -76,9 +76,18 @@ boxes.forEach((box) => {
   box.addEventListener("click", () => {
     
     if (box.innerText === "") { // Check if the box is empty
-      box.innerText = turn ? "X" : "O"; // Alternate between "X" and "O"
-      turn = !turn; // Switch turns
-      console.log("hiiiii");
+    //   box.innerText = turn ? "X" : "O"; 
+    if(turn){
+        box.innerText="X"
+        turn = !turn;
+        box.style.setProperty('color', 'blue');
+        
+    }else{
+        box.innerText="O"
+
+        turn = !turn; // Switch turns
+    }
+      
     }
     checkWinner();
     
