@@ -1,21 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-body{
+  }
+  
+  body {
     text-align: center;
-    background-color: #543687;
+  
     background-color: rgb(125, 184, 164);
-}
-.container{
+  }
+  
+  .container {
     height: 70vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-}
-.game{
+  }
+  
+  .game {
     height: 60vmin;
     width: 60vmin;
     display: flex;
@@ -24,41 +26,47 @@ body{
     flex-wrap: wrap;
     gap: 1.5vmin;
     position: relative;
-    <!-- background-color: red; -->
-
-}
-.box{
+  }
+  
+  .box {
     height: 18vmin;
     width: 18vmin;
     border-radius: 1rem;
     background-color: hwb(0 97% 1%);
     border: none;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 15vmin;
     color: red;
-   
-
-}
-.notify{
+  }
+  
+  .notify {
     height: 20vmin;
     width: 25vmin;
     border: 1px solid blueviolet;
     position: absolute;
-  top: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  background-color: #d65db1;
-  border-radius: 7px;
- 
-}
-.btn{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d65db1;
+    border-radius: 7px;
+    padding: 10px; /* Add some padding to make room for the button */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .btn {
+    position: absolute; /* Change from absolute to relative */
     height: 3vmin;
     width: 8vmin;
     border-radius: 8px;
     color: aliceblue;
     background-color: black;
-    position: absolute;
-    top: 17vmin;
-    left: 9vmin;
-
-}
+    left: 26vmin;
+    top: 38vmin;
+  }
