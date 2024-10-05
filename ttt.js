@@ -77,15 +77,17 @@ boxes.forEach((box) => {
     
     if (box.innerText === "") { // Check if the box is empty
     //   box.innerText = turn ? "X" : "O"; 
+    // turn = !turn;
     if(turn){
         box.innerText="X"
-        turn = !turn;
+        turn = false;
         box.style.setProperty('color', 'blue');
         
     }else{
         box.innerText="O"
-
-        turn = !turn; // Switch turns
+        
+        box.style.setProperty('color', 'red');
+        turn = true; // Switch turns
     }
       
     }
