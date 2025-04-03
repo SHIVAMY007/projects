@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculateMyDahej.com</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Bungee+Tint&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>CMD</h1>
+        <p class="welcome-text">Welcome to</p>
+        <h2 class="site-name">CalculateMyDahej.com</h2>
+        
+        <p class="para"><i>Best way to calculate your dahej</i></p>
+        
+        <label>Gender</label>
+        <select id="gender">
+            <option value="">Select</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+        
+        <label>Salary:</label>
+        <input type="number" id="salary" placeholder="Enter salary">
+        
+        <label>Land</label>
+        <input type="number" id="khet" placeholder="Enter land in bigha">
+        
+        <label>Number of Cattles</label>
+        <input type="number" id="cows" placeholder="Enter number of cattles">
+        
+        <label>Government Job in Family?</label>
+        <select id="govtJob" onchange="togglePost()">
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+        
+        <div id="post-section" style="display:none;">
+            <label>Government Job Post:</label>
+            <input type="text" id="post" placeholder="Enter post">
+        </div>
+        
+        <button id="calculate-btn" onclick="calculateDahej()">Calculate</button>
+
+        <p class="footer">Made with ❤️ by AKASH</p>
+    </div>
+    
+    <div class="popup" id="popup">
+        <!-- Inside the popup div -->
+<div class="loading" id="loading"></div>
+<h2 id="popup-text">Calculating...</h2>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
